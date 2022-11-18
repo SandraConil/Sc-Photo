@@ -1,13 +1,75 @@
-@media (min-width: 768px) and (max-width: 1200px)
-{
-/*body*/
-background-color: black;
+:root{
+    --first-color-pink: rgb(203, 3, 120);
+    --second-color: black;
+    --text: tahoma; 
+}
 
+@media (max-width: 320px) { 
+    .menu { 
+      display: none; 
+    } 
+  }
+     
     /*header*/
-.picture_header{
-   display: flex;
+body{
+    background: linear-gradient(var(--second-color), var(--first-color-pink)); 
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    display: flex;
+}
+header img {
+    max-width: 100%;
+}
+.contener-menu{
+    height: 100%;
+    position: relative;
+}
+.picture-header{
+    height: 100%;
+    width: 100%;
+
+}
+.logo{
+position: relative;
+left: 320px;
+bottom: -280px;
+}
+
+    /*menu*/
+ul {
+    color: var(--first-color-pink);
+    position: absolute;
+    width: 300px;     
+}
+li{
+    list-style: none;
+}
+a:hover{
+    background-color: var(--first-color-pink);
+}
+.barre{
+    border-bottom: 2px solid var(--first-color-pink);
+    width: 20px;
+    margin-bottom: 10px;
+    height: 30px;
 }
 
     /*main*/
+h1{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    text-align: center;
+    font-size: 40px;
+    color: var(--first-color-pink);
+}
+.photo-grid {
+    width: 100%;
+   
+    
+}
+.card img {
+    max-width: 100%;
+}
 
     /*footer*/

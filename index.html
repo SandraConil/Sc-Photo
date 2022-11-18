@@ -3,43 +3,63 @@
 <head>
 	<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width"/> <!--pour adapter au tel-->
-    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https : //fonts.googleapis.com/css2?family= Playfair+Display+SC:ital,wght@1,700 & display famille= Playfair+Display+SC:ital,wght@1,400;1,700 & swap" rel="stylesheet">
     <title>Sc Photo</title>
 </head>
 <body>
     <header>
-         <img class="picture_header" src="pictures/header.JPG" alt="ventre femme enceinte" style="max-width:100%;height:auto ;>
-         <img src="pictures/mon_logo3.png" alt="mon logo">
-      <section class="encres">
+            <div class="contener-menu">
+                <img class="picture-header" src="pictures/header1024.jpg" alt="ventre femme enceinte">
+        <nav class="mobile">
+            <div>
+                <div class="barre"></div>
+                <div class="barre"></div>
+                <div class="barre"></div>
+                <div class="barre"></div>
+            </div>
          <ul>
-            <li><a href="#Grossesse">Grossesse</a></li>
-            <li><a href="#Maternité">Maternité</a></li>
-            <li><a href="#Bébé">Bébé</a></li>
-            <li><a href="#Enfants">Enfants</a></li>
-        </ul>
-    </section> 
+            <li><a href="#">Grossesse</a></li>
+            <li><a href="#">Maternité</a></li>
+            <li><a href="#">Bébé</a></li>
+            <li><a href="#">Enfants</a></li>
+         </ul>
+     </nav> 
+     <nav class="all">
+        <ul>
+            <li><a href="#">Grossesse</a></li>
+            <li><a href="#">Maternité</a></li>
+            <li><a href="#">Bébé</a></li>
+            <li><a href="#">Enfants</a></li>
+         </ul>
+     </nav>
+             <img src="pictures/mon_logo3.png" alt="mon logo">
+        </div>   
+        
     </header>
 
     <main>
         <h1>Immortalisez vos plus belles Emotions</h1>
-       <section> 
-            <img id="Grossesse" src="pictures/couple.jpg" alt="couple">
-                <p>Grossesse</p>
-           <img id="Maternité" src="pictures/maternite.jpg" alt="baby">
-                <p>Maternité</p>
-            <img id="Bébé" src="pictures/bebe1.jpg" alt="bébé de maternité">
-               <p>Bébés</p>
-            <img src="pictures/enfant.JPG" alt="girl children">
-             <p>Enfants</p>
-    </section>
+        <div class="photo-grid">
+            <div class="card">
+                <img src="pictures/couple.jpg" alt="cpl">
+                    <p>Grossesse</p>
+                <img src="pictures/maternite.jpg" alt="maternite">
+                    <p>Maternité</p>
+                <img src="pictures/bebe1.jpg" alt="bebe">
+                    <p>Bébé</p>
+                <img src="pictures/enfant.JPG" alt="enfant">
+                    <p>Enfants</p>
+            </div>
+        </div>    
     </main>
 
     <footer>
-        <section>
            <p class="sc77">Sandra Conil<span class="big">77</span></p> 
-           <p class="phone">Télèphone</p>
-        </section>
+           <p class="phone">06.27.85.06.54</p>
     </footer>
-	
 </body>
 </html>
