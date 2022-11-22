@@ -19,9 +19,10 @@ body {
     grid-template-rows: minmax(200px,auto);
 }
 .picture-header{
-  
-    height: 200px;
-    width: 100%;   
+    width: 100%; 
+    position: absolute;
+    border-image: url(pictures/header1024.jpg)round;
+   
 }
 
 /* mon logo*/
