@@ -1,51 +1,33 @@
+        /*  */
 :root {
     --first-color-pink: rgb(203, 3, 120);
     --second-color: black;
     --text: tahoma;
 }
-
-
-.menu {
-    display: none;
-}
-
-
-/*header*/
+/*mon degradé de tout mon body*/
 body {
     background: linear-gradient(var(--second-color), var(--first-color-pink));
     margin: 0px;
     padding: 0px;
 }
 
-header {
+        /*header*/
+.container-header{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr) ;
-    max-width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-template-rows: minmax(200px,auto);
 }
-.img-header{
-    grid-area: 1/1/4/4;
-}
-img{
-    width: 100%;
-}
-.logo{
-    grid-area: 1/3/2/4;
+.picture-header{
+  
+    height: 200px;
+    width: 100%;   
 }
 
-.contener-menu {}
+/* mon logo*/
 
-.picture-header {
-    height: 100%;
-    width: 100%;
 
-}
 
-.logo {
-    position: absolute;
-    left: 320px;
-    bottom: 180px;
-}
 
 /*menu*/
 ul {
@@ -69,5 +51,15 @@ h1 {
     font-size: 40px;
     color: var(--first-color-pink);
 }
+
+/*main*/
+h1{
+    color: var(--first-color-pink);
+    font-family: Helvetica, sans-serif;
+}
+.grid-pictures{
+    
+}
+
 
 /*footer*/
