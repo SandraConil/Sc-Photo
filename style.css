@@ -9,6 +9,7 @@ body {
     background: linear-gradient(var(--second-color), var(--first-color-pink));
     margin: 0px;
     padding: 0px;
+    min-height: 100vh;
 }
 
         /*header*/
@@ -16,13 +17,13 @@ body {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-template-rows: minmax(200px,auto);
+    grid-template-rows: minmax(100px,auto); 
 }
 .picture-header{
-    width: 100%; 
+    height: 50%; 
     position: absolute;
-    border-image: url(pictures/header1024.jpg)round;
-   
+
+    
 }
 
 /* mon logo*/
@@ -58,9 +59,37 @@ h1{
     color: var(--first-color-pink);
     font-family: Helvetica, sans-serif;
 }
-.grid-pictures{
-    
+
+/*ma gallerie photo*/
+.gallery{
+    --s: 250px; /*je controle la taille*/
+    --g : 10px; /*je controle la marge gap*/
+    --f: 1.5; /*je controle le facteur d'echeller pour controler la taille de survol*/  
+    display: grid;  
+    gap : var(--g);
+    width: calc(3*var(--s) + 2*var(--g));
+    aspect-ratio: 1; /*permet de garder les choses en proportion*/
+    grid-template-columns: repeat(3,auto); /*je veux 3 colonnes*/  
 }
+/*style de mes photos de main*/
+.gallery > img { 
+    width: 0;
+    height: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    filter: grayscale(80%); /*j'ai ajouter un filtre pour que mes photos soient gris à 80%*/    transition: 2s linear;
+  box-shadow: 4px 3px 5px white;
+  
+ 
+}
+.gallery img:hover{
+    filter: grayscale(0);
+    width: calc(var(--s)*var(--f));
+    height:calc(var(--s)*var(--f)) ;
+}
+
 
 
 /*footer*/
