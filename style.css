@@ -1,4 +1,3 @@
-        /*  */
 :root {
     --first-color-pink: rgb(203, 3, 120);
     --second-color: black;
@@ -13,52 +12,75 @@ body {
 }
 
         /*header*/
-.container-header{
+ .header {
     display: grid;
     grid-column-start: 1;
     grid-column-end: 4;
-    grid-template-rows: minmax(100px,auto); 
+    grid-template-rows: minmax(250px,auto); 
+    background-image: url(pictures/1024.jpg);
+    background-size: cover;
+    background-position:center;
+ }   
+.nom{
+    text-align: center;
+
 }
-.picture-header{
-    height: 50%; 
+/* mon logo*/
+.logo {
     position: absolute;
+    left:80px;
+    bottom: 95px;
+}
 
     
-}
 
-/* mon logo*/
-
-
-
-
-/*menu*/
-ul {
-    position: absolute;
-    width: 300px;
-}
-
-li {
-    list-style: none;
-    color: black;
-}
-
-a:hover {
+/*menu burger*/
+.sidenav{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
     background-color: var(--first-color-pink);
+    padding-top: 60px;
+    transition: left 1s ease;
 }
-
+.sidenav a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: yellow;
+display: block;
+transition: 1s;
+}
+.sidenav a:hover {
+    color: aqua;
+}
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.sidenav.active {
+    left: 0;
+}
+.sidenav.close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: brown;
+    margin: 6px 0;
+}
 /*main*/
-h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    font-size: 40px;
-    color: var(--first-color-pink);
-}
 
-/*main*/
-h1{
-    color: var(--first-color-pink);
-    font-family: Helvetica, sans-serif;
-}
+
 
 /*ma gallerie photo*/
 .gallery{
@@ -79,8 +101,10 @@ h1{
     min-height: 100%;
     object-fit: cover;
     cursor: pointer;
-    filter: grayscale(80%); /*j'ai ajouter un filtre pour que mes photos soient gris à 80%*/    transition: 2s linear;
+    filter: grayscale(80%); /*j'ai ajouter un filtre pour que mes photos soient gris à 80%*/    
+    transition: 2s linear;
   box-shadow: 4px 3px 5px white;
+
   
  
 }
@@ -92,11 +116,8 @@ h1{
 
 /*footer*/
 .footer{
+    
     text-align: center;
-    /*padding-top: 150px;*/
     padding: 60px 50px 40px 50px;
 }
-.copyright{
 
-    
-}
