@@ -1,123 +1,102 @@
 :root {
     --first-color-pink: rgb(203, 3, 120);
     --second-color: black;
-    --text: tahoma;
 }
+
 /*mon degradé de tout mon body*/
 body {
     background: linear-gradient(var(--second-color), var(--first-color-pink));
     margin: 0px;
     padding: 0px;
-    min-height: 100vh;
 }
 
-        /*header*/
- .header {
+/*header*/
+.header-grid {
     display: grid;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-template-rows: minmax(250px,auto); 
-    background-image: url(pictures/1024.jpg);
+    grid-template-columns: repeat(5, minmax(10vw, 100vw));
+    /* grid-template-columns: 20vw 25vw 15vw 10vw 30vw; */
+    /* grid-template-rows: 5vh 5vh 7vh 7vh; */
+    grid-template-rows: repeat(4, minmax(7vh, auto));
+    /* background-color: aqua; */
+    /* grid-column-start: span5; */
+    /* grid-template-rows: minmax(250px,auto);  */
+    /* background-image: url(pictures/1024.jpg);
     background-size: cover;
-    background-position:center;
- }   
-.nom{
-    text-align: center;
+    background-position:center;*/
 
 }
+
+.bg-header {
+    grid-column: 1/6;
+    grid-row: 1/5;
+    width: 100%;
+    /* grid-area: 1/1/5/6; */
+   
+
+}
+
+.nom {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 20px;
+    color: var(--first-color-pink);
+    grid-area: 1/4/2/6;
+
+}
+
+.texte-header {
+    color: var(--first-color-pink);
+    text-align: right;
+    font-size: 15px;
+    grid-area: 2/4/3/5;
+}
+
 /* mon logo*/
 .logo {
-    position: absolute;
-    left:80px;
-    bottom: 95px;
+    grid-area: 3/1/4/2;
+    align-self: top;
+    width: 205%;
 }
-
-    
-
-/*menu burger*/
-.sidenav{
-    height: 100%;
-    width: 250px;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: -250px;
-    background-color: var(--first-color-pink);
-    padding-top: 60px;
-    transition: left 1s ease;
-}
-.sidenav a {
-padding: 8px 8px 8px 32px;
-text-decoration: none;
-font-size: 25px;
-color: yellow;
-display: block;
-transition: 1s;
-}
-.sidenav a:hover {
-    color: aqua;
-}
-.sidenav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-.sidenav.active {
-    left: 0;
-}
-.sidenav.close {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-}
-.burger-icon span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    background-color: brown;
-    margin: 6px 0;
-}
-/*main*/
-
-
 
 /*ma gallerie photo*/
-.gallery{
-    --s: 250px; /*je controle la taille*/
-    --g : 10px; /*je controle la marge gap*/
-    --f: 1.5; /*je controle le facteur d'echeller pour controler la taille de survol*/  
-    display: grid;  
-    gap : var(--g);
+.gallery {
+    --s: 25%;
+    /*je controle la taille*/
+    --g: 5px;
+    /*je controle la marge gap*/
+    --f: 1.5;
+    /*je controle le facteur d'echeller pour controler la taille de survol*/
+    display: grid;
+    gap: var(--g);
     width: calc(3*var(--s) + 2*var(--g));
-    aspect-ratio: 1; /*permet de garder les choses en proportion*/
-    grid-template-columns: repeat(3,auto); /*je veux 3 colonnes*/  
+    aspect-ratio: 1;
+    /*permet de garder les choses en proportion*/
+    grid-template-columns: repeat(3, auto);
+    /*je veux 3 colonnes*/
 }
-/*style de mes photos de main*/
-.gallery > img { 
+
+/* style de mes photos de main */
+.gallery>img {
     width: 0;
     height: 0;
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
     cursor: pointer;
-    filter: grayscale(80%); /*j'ai ajouter un filtre pour que mes photos soient gris à 80%*/    
-    transition: 2s linear;
-  box-shadow: 4px 3px 5px white;
-
-  
- 
+    filter: grayscale(80%);
+    /*j'ai ajouter un filtre pour que mes photos soient gris à 80%*/
+    transition: 1s linear;
+    box-shadow: 2px 2px 6px white;
 }
-.gallery img:hover{
-    filter: grayscale(0);
+
+.gallery img:hover {
+    filter: grayscale(0%);
     width: calc(var(--s)*var(--f));
-    height:calc(var(--s)*var(--f)) ;
+    height: calc(var(--s)*var(--f));
 }
 
 /*footer*/
-.footer{
-    
+.footer {
+    max-width: 100%;
     text-align: center;
     padding: 60px 50px 40px 50px;
 }
-
