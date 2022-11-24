@@ -1,77 +1,123 @@
 :root {
-    --first-color-pink: rgb(203, 3, 120);
-    --second-color: black;
+    --first-color-pink: rgb(233, 27, 147);
+    --second-color: rgb(16, 18, 17);
+}
+
+@media all and (<max-width:1024px>) {
+.header-grid, body {
+        display: none;
+    }
 }
 
 /*mon degradé de tout mon body*/
 body {
     background: linear-gradient(var(--second-color), var(--first-color-pink));
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 /*header*/
 .header-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(10vw, 100vw));
-    /* grid-template-columns: 20vw 25vw 15vw 10vw 30vw; */
-    /* grid-template-rows: 5vh 5vh 7vh 7vh; */
-    grid-template-rows: repeat(4, minmax(7vh, auto));
-    /* background-color: aqua; */
-    /* grid-column-start: span5; */
-    /* grid-template-rows: minmax(250px,auto);  */
-    /* background-image: url(pictures/1024.jpg);
-    background-size: cover;
-    background-position:center;*/
-
+    grid-template-rows: repeat(4, minmax(5vh, 50px));
 }
 
 .bg-header {
     grid-column: 1/6;
     grid-row: 1/5;
     width: 100%;
-    /* grid-area: 1/1/5/6; */
-   
-
 }
 
-.nom {
+/* .nom {
     font-family: 'Playfair Display SC', serif;
-    font-size: 20px;
+    font-size: 25px;
     color: var(--first-color-pink);
     grid-area: 1/4/2/6;
-
-}
+    text-shadow: 1px 1px 2px black; */
+/* }
 
 .texte-header {
     color: var(--first-color-pink);
-    text-align: right;
-    font-size: 15px;
-    grid-area: 2/4/3/5;
-}
+    text-align: center;
+    font-size: 20px;
+    grid-area: 4/4/3/5;
+   
+} */
 
 /* mon logo*/
 .logo {
-    grid-area: 3/1/4/2;
+    grid-area: 3/1/4/3;
     align-self: top;
-    width: 205%;
+    width: 120%;   
 }
 
-/*ma gallerie photo*/
+/*main*/
+.bloc-container{
+   display: flex; 
+   flex-direction: column;
+   width: 100%;
+   overflow-y: scroll;
+}
+.text-main {
+    display: flex;
+   align-items: center;
+   flex-direction: column;
+
+}
+.photographe, .nom, .phone  {
+color: white;
+margin: 7px;
+}
+.nom {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.photographe {
+    font-size: 15px;
+}
+.phone {
+    font-size: 25px;
+}
+p {
+    font-size: 20px ;
+    color: white;
+    margin: 25px;
+}
+/*footer*/
+.footer {
+    max-width: 100%;
+    text-align: center;
+}
+.copyright {
+    color: white;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+ma gallerie photo
 .gallery {
     --s: 25%;
     /*je controle la taille*/
-    --g: 5px;
-    /*je controle la marge gap*/
-    --f: 1.5;
-    /*je controle le facteur d'echeller pour controler la taille de survol*/
-    display: grid;
-    gap: var(--g);
-    width: calc(3*var(--s) + 2*var(--g));
-    aspect-ratio: 1;
-    /*permet de garder les choses en proportion*/
-    grid-template-columns: repeat(3, auto);
-    /*je veux 3 colonnes*/
+--g: 5px;
+/*je controle la marge gap*/
+--f: 1.5;
+/*je controle le facteur d'echeller pour controler la taille de survol*/
+display: grid;
+gap: var(--g);
+width: calc(3*var(--s) + 2*var(--g));
+aspect-ratio: 1;
+/*permet de garder les choses en proportion*/
+grid-template-columns: repeat(3, auto);
+/*je veux 3 colonnes*/
 }
 
 /* style de mes photos de main */
@@ -92,11 +138,4 @@ body {
     filter: grayscale(0%);
     width: calc(var(--s)*var(--f));
     height: calc(var(--s)*var(--f));
-}
-
-/*footer*/
-.footer {
-    max-width: 100%;
-    text-align: center;
-    padding: 60px 50px 40px 50px;
 }
