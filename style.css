@@ -3,11 +3,11 @@
     --second-color: rgb(16, 18, 17);
 }
 
-@media all and (<max-width:1024px>) {
+/* @media all and (<max-width:1024px>) {
 .header-grid, body {
         display: none;
     }
-}
+} */
 
 /*mon degradé de tout mon body*/
 body {
@@ -28,22 +28,6 @@ body {
     grid-row: 1/5;
     width: 100%;
 }
-
-/* .nom {
-    font-family: 'Playfair Display SC', serif;
-    font-size: 25px;
-    color: var(--first-color-pink);
-    grid-area: 1/4/2/6;
-    text-shadow: 1px 1px 2px black; */
-/* }
-
-.texte-header {
-    color: var(--first-color-pink);
-    text-align: center;
-    font-size: 20px;
-    grid-area: 4/4/3/5;
-   
-} */
 
 /* mon logo*/
 .logo {
@@ -84,6 +68,64 @@ p {
     color: white;
     margin: 25px;
 }
+
+/*slides*/ 
+.container-slider{
+    width: 500px; /*car mes photos font 500px de large*/
+    overflow: hidden; /*pour cacher mes autres photos sous la 1ere photo*/  
+}
+.slides{ 
+    width: calc(500px*3);/* toutes mes photos font 500px  et je les veux cote à cote*/ 
+ margin:20px auto; /*marge entre mes blocs de 20px*/
+ animation: glisse 15s infinite; /*je mets mon animation keyframes à 5sec en faisant une boucle*/
+}
+
+.slide { 
+    float: left; *toutes mes photos doivent etre à gauche*/
+    max-width: 100%;
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-500px);
+    }
+    43% {
+        transform: translateX(-500px);
+    }
+    66% {
+        transform: translateX(-1000px);
+    }
+    76% {
+        transform: translateX(-1000px);
+    }
+    0% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*footer*/
 .footer {
     max-width: 100%;
