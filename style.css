@@ -3,13 +3,7 @@
     --second-color: rgb(16, 18, 17);
 }
 
-/* @media all and (<max-width:1024px>) {
-.header-grid, body {
-        display: none;
-    }
-} */
 
-/*mon degradé de tout mon body*/
 body {
     background: linear-gradient(var(--second-color), var(--first-color-pink));
     margin: 0;
@@ -28,6 +22,17 @@ body {
     grid-row: 1/5;
     width: 100%;
 }
+
+/*mon menu*/
+.menu {
+    display: block;
+    align-items: center;
+    background-color: var(--first-color-pink);
+}
+
+
+
+
 
 /* mon logo*/
 .logo {
@@ -110,6 +115,28 @@ p {
 }
 
 
+/*min-width pour les ecrans 1024*/
+@media  screen and (min-width: 1024px) {
+    .main, .bloc-container {
+        width: 100%;
+        clear: none;
+    }   
+}
+
+/*max-width pour les petits ecrans*/
+@media  screen and (max-width:640px) {
+    .menu a {
+        display: block;
+    }
+    .menu li {
+        float: none;
+        width: 100%;
+    }
+    .main, .menu {
+        clear: both;
+        width: 100%;
+    }
+}
 
 
 
