@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and (max-width: 1024px)" href="smallscreen.css" type="text/css" />
     <title>Sc Photo</title>
 </head>
 
@@ -14,26 +13,25 @@
     <header>
         <div class="header-grid">
             <img class="bg-header" src="pictures/header1024_degrade.jpg" alt="femme enceinte">
-            <img class="logo" src="pictures/mon_logo.png" alt="mon logo">
+            <!-- <img class="logo" src="pictures/mon_logo.png" alt="mon logo"> -->
         </div>
-    </header>
-    <div class="container-menu">
-        <nav class="navbar dark-mode" role="navigation">
-            <div class="navbar_logo">
-                <ul class="navbar_links">
-                    <li class="navbar_link"><a href="#">Grossesse</a></li>
-                    <li class="navbar_link"><a href="#">Maternité</a></li>
-                    <li class="navbar_link"><a href="#">Bébé</a></li>
-                    <li class="navbar_link"><a href="#">Enfants</a></li>
-                    <li class="navbar_link"><a href="#">Contact</a></li>
-                </ul>
-        </nav>
-    </div>
-    <button class="burger">
-        <span class="barre"></span>
-    </button>
 
-    </div>
+        <nav class="navbar dark-mode" role="navigation">
+            <div class="navbar__logo">
+                <img src="pictures/mon_logo.png" alt="mon logo">
+            </div>    
+            <ul class="navbar__links">
+              <li class="navbar__link first"><a href="#section1">Grossesse</a></li>
+              <li class="navbar__link second"><a href="#section2">Maternite</a></li>
+              <li class="navbar__link third"><a href="#section3">Bébés</a></li>
+              <li class="navbar__link four"><a href="#section4">Enfants</a></li>
+              <li class="navbar__link fifth"><a href="#section5">Contact</a></li>
+            </ul>   
+            <button class="burger">
+              <span class="bar"></span>  
+            </button>   
+          </nav>
+    </header>
     <main class="main-content" role="main">
         <div class="bloc-container">
             <div class="text-main">
@@ -41,7 +39,8 @@
                 <p class="phone"> 06.27.85.06.54</p>
                 <p>Immortalisez vos plus belles Emotions</p>
             </div>
-            <div class="container-slider">
+            <br>
+            <div id="section1" class="container-slider">
                 <div class="slides">
                     <img class="slide" src="pictures/couple1.jpg" alt="maternite">
                     <img class="slide" src="pictures/couple2.jpg" alt="maternite">
@@ -53,7 +52,7 @@
                     jumeaux, la séance est conseillée à 5 ou 6 mois de grossesse. <br>
                     Séance : 80 € (une vingtaine de photos HD) </p>
             </div>
-            <div class="container-slider">
+            <div id="section2" class="container-slider">
                 <div class="slides">
                     <img class="slide" src="pictures/bebe1 (1).jpg" alt="bebe">
                     <img class="slide" src="pictures/bebe2 (1).jpg" alt="bebe">
@@ -66,7 +65,7 @@
                 séance est conseillée à 5 ou 6 mois de grossesse. <br>
                 Séance : 55 € (une vingtaine de photos HD) </p>
             <div class="container-slider">
-                <div class="slides">
+                <div id="section4" class="slides">
                     <img class="slide" src="pictures/enfant2 (1).jpg" alt="bebe">
                     <img class="slide" src="pictures/enfant4 (1).jpg" alt="bebe">
                     <img class="slide" src="pictures/enfant5 (1).jpg" alt="bebe">
@@ -84,6 +83,8 @@
     <footer>
         <div class="footer">
             <img class="avatar" src="pictures/mon_avatar.png" alt="mon avatar">
+            <p id="section5"> Telephone : 06.27.85.06.54</p> <br>
+            <p>sandraconil77@gmail.com</p>
             <p class="copyright">@ 2022 - Sandra Conil - Photographe à domicile - 77 - ESBLY et ses environs - Mentions
                 Légales - CGU</p>
         </div>
