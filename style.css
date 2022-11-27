@@ -1,13 +1,30 @@
+/*mes polices d'ecritures --Fonts*/
+@import url('https://fonts.googleapis.com/css2? family= Nunito:ital,wght@1,200 & family= Playfair+Display+SC:ital,wght@1,400;1,700 & display=swap' );
+/*font-family: 'Nunito', sans-serif;    (pour ma barre de menu)
+font-family: 'Playfair Display SC', serif;*/
+
+/*mes Variables*/
 :root {
     --first-color-pink: rgb(233, 27, 147);
     --second-color: rgb(16, 18, 17);
+    --font-size:1rem;
+} /*pour mon mode menu*/
+.light-mode {
+    --navbar-color : cyan;
+    --navbar-bg-color :yellow; 
+}
+.dark-mode { /*pour mon mode menu*/
+    --navbar-color : rgb(206, 90, 7);
+    --navbar-bg-color :rgb(111, 16, 207); 
 }
 
-
-body {
-    background: linear-gradient(var(--second-color), var(--first-color-pink));
+/*reset*/
+* {
+   /* background: linear-gradient(var(--second-color), var(--first-color-pink));*/
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /*video menu*/
+    outline: none; /*video menu*/
 }
 
 /*header*/
@@ -23,25 +40,85 @@ body {
     width: 100%;
 }
 
-/*mon menu*/
-.menu {
-    display: block;
-    align-items: center;
-    background-color: var(--first-color-pink);
+                /***********************mon menu**************************************************************************/
+ul{
+    list-style: none; /*pour enlever la liste à puces*/
+}
+/*basic style de mon menu*/
+body{
+font-size: var(--font-size);
+font-family: 'Nunito', sans-serif;
+}
+/*Navbar*/
+.navbar {
+    display: flex;
+    align-items: ;
+    justify-content: space-between;
+    padding: 10px;
+    background: var(--navbar-bg-color);
+    color: var(--navbar-color);
+    height: 250px;
+    width: 100%;
 }
 
+.navbar_links{
+    display: flex;   /*pour mettre mon menu en ligne*/ 
+}
+.navbar_link{
+    display: flex;  
+    padding: 0 30px;  /*pour faire des espaces à droite et à gauche*/
+}
+.navbar_link > a{/*nav barre pour les liens*/
+display: flex;  
+color: var(--navbar-color); 
+text-decoration: none;
+} 
+.burger {
+display: none; /*pas besoin sur mon grand ecran donc je le fais disparaitre*/ 
+}
+/*toggle menu*/
+
+/*bonus animation de ma barre de nav et burger */
+
+/*small devices*/
+@media screen and (max-width:767.98px){
+    .navbar_links{
+        display: flex;
+        flex-direction: column ;
+        width: 0;
+        height: 100vh;
+        position: absolute;
+        top: 250px;
+    }
+
+}
+
+/*medium devices*/
+@media screen and (min-width:768px){
+   .navbar_link > a::after {
+    display: block;
+    content:"";
+    width: 0;
+    height: 1px;
+    background: var(--navbar-color);
+    transition: width .4s;
+   } 
+   .navbar_link:hover > a::after {
+    width: 100% ; /*quand on va survoler les li nos elements after vont s'agrzndir*/
+   }
+}
+    
 
 
 
-
-/* mon logo*/
+            /************************************** mon logo***********************************************************************************/
 .logo {
     grid-area: 3/1/4/3;
     align-self: top;
     width: 120%;   
 }
 
-/*main*/
+/******************************************main***********************************************************************************************/
 .bloc-container{
    display: flex; 
    flex-direction: column;
@@ -70,23 +147,25 @@ margin: 7px;
 }
 p {
     font-size: 20px ;
-    color: white;
+    color: var(--second-color);
     margin: 25px;
 }
 
-/*slides*/ 
+/**************************************slides ma gallerie photos du main************************************************************************************/ 
 .container-slider{
-    width: 500px; /*car mes photos font 500px de large*/
+     width: 500px; /*car mes photos font 500px de large*/
     overflow: hidden; /*pour cacher mes autres photos sous la 1ere photo*/  
 }
 .slides{ 
+    display: flex;
     width: calc(500px*3);/* toutes mes photos font 500px  et je les veux cote à cote*/ 
- margin:20px auto; /*marge entre mes blocs de 20px*/
+ margin:10px auto; /*marge entre mes blocs de 20px*/
  animation: glisse 15s infinite; /*je mets mon animation keyframes à 5sec en faisant une boucle*/
 }
 
 .slide { 
-    float: left; *toutes mes photos doivent etre à gauche*/
+    display: flex;
+    justify-content: flex-start;
     max-width: 100%;
 }
 
@@ -113,44 +192,19 @@ p {
         transform: translateX(0);
     }
 }
-
-
-/*min-width pour les ecrans 1024*/
-@media  screen and (min-width: 1024px) {
-    .main, .bloc-container {
-        width: 100%;
-        clear: none;
-    }   
+.main-content{
+    width: 100%;
+    height: 200px;
 }
+.infos {
+    background-color: aqua;
+    display: flex;
+    flex-flow: column;
+    width: 50%;
+    text-align: center;
+height: 150px;
 
-/*max-width pour les petits ecrans*/
-@media  screen and (max-width:640px) {
-    .menu a {
-        display: block;
-    }
-    .menu li {
-        float: none;
-        width: 100%;
-    }
-    .main, .menu {
-        clear: both;
-        width: 100%;
-    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*footer*/
@@ -163,48 +217,3 @@ p {
     font-size: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-ma gallerie photo
-.gallery {
-    --s: 25%;
-    /*je controle la taille*/
---g: 5px;
-/*je controle la marge gap*/
---f: 1.5;
-/*je controle le facteur d'echeller pour controler la taille de survol*/
-display: grid;
-gap: var(--g);
-width: calc(3*var(--s) + 2*var(--g));
-aspect-ratio: 1;
-/*permet de garder les choses en proportion*/
-grid-template-columns: repeat(3, auto);
-/*je veux 3 colonnes*/
-}
-
-/* style de mes photos de main */
-.gallery>img {
-    width: 0;
-    height: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    filter: grayscale(80%);
-    /*j'ai ajouter un filtre pour que mes photos soient gris à 80%*/
-    transition: 1s linear;
-    box-shadow: 2px 2px 6px white;
-}
-
-.gallery img:hover {
-    filter: grayscale(0%);
-    width: calc(var(--s)*var(--f));
-    height: calc(var(--s)*var(--f));
-}
