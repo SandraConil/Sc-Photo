@@ -5,7 +5,7 @@ font-family: 'Playfair Display SC', serif;*/
 
 /*mes Variables*/
 :root {
-    --first-color-pink: rgba(226, 113, 150, 0.784);
+    --first-color-pink: rgba(156, 50, 85, 0.784);
     --second-color: rgb(16, 18, 17);
     --third-color :rgb(124, 122, 122);
     --font-size: 1rem;
@@ -17,21 +17,19 @@ font-family: 'Playfair Display SC', serif;*/
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    
-}
+
 .container-grid{
     height: 100vh; /*mon conteneur va faire une hauteur de 100%*/
     width: 100%;
     display: grid;
-    grid-template-columns: 180px 1fr 500px; 
+    grid-template-columns:1fr 1fr; 
     grid grid-template-rows: 300px 1fr 300px; /*faire 3lignes*/
 }
 
 header {
     grid-column: span 4; /*prendre la largeur de mes 4 colonnes*/
     padding: 200px;
-    background-image: url(pictures/header1024_degrade.jpg);
+    background-image: url(pictures/header2_1024.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
    
@@ -43,20 +41,30 @@ main {
 
 }
 nav{
- background-color: var(--first-color-pink);
-   
+ background-color:var(--first-color-pink);
+ grid-column: span 4;
+
+ 
 }
-.liste{
-    list-style-type: none;
-    max-height: 650px;
-   
+nav a{
+    justify-content: space-around;
+    flex-direction: row;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #FFF;
+    margin: 1px;
+    text-transform: capitalize;
+    
 }
-.liste li a {
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav a:hover {
+background-color: var(--third-color);
+color: #000;
+transition: all 2s ease-in-out;
 }
+ 
 /*mon logo*/
 .logo {
 width: 100%;
@@ -74,8 +82,12 @@ h1 {
    
     
 }
+.info {
+    display: flex;
+    justify-items: center ;
+}
 /*coté gauche*/
-aside {
+/* aside {
     padding: 50px;
     background-color: #adadad;
     display: flex;
@@ -87,7 +99,7 @@ aside p {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+} */
 
 /*slides ma gallerie photos du main*/
 .container-slider {
