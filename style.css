@@ -1,14 +1,17 @@
-main{
-min-height: 70vh;
+/*mes variables*/
+:root {
+    --color-pink : rgb(174, 86, 130);
+    --color-gray :rgb(156, 152, 152); 
 }
+
+/*font*/
+@font-face{
+    font-family: Cougette;
+}
+
 header{
     position: relative;
 height : 15vh;
-}
-footer{
-    height : 10vh;
-    background-color: blueviolet;
-
 }
 
 header img{
@@ -21,7 +24,7 @@ header img{
     bottom : 0;
     height : 40px;
     width : 40px;
-    background-color: pink;
+    background-color: var(--color-pink);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -50,9 +53,97 @@ main nav ul{
     justify-content: space-around;
 background-color: pink;
 
-    /* justify-content: center; */
 }
 
 .toggle{
     display:flex;
+}
+
+/*main ***************************************************************************************************************/
+main{
+    margin-bottom: 30px;
+    min-height: 70vh;
+    background-color: var(--color-gray);
+    }
+
+h1 {
+font-size: 30px;
+padding-top: 20px ; /*ma marge entre mon header et mon titre*/
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1, p {
+ text-align: center;
+}
+.studio {
+    font-size: 18px;
+    text-align: center;
+}
+
+.bloc-texte-main {
+       
+}
+.info {
+  
+    text-align: center;
+    
+   
+}
+/*slides ma gallerie photos du main*/
+.container-slider {
+    width: 500px;
+    /*car mes photos font 500px de large*/
+    overflow: hidden;
+    /*pour cacher mes autres photos sous la 1ere photo*/
+}
+.slides {
+    display: flex;
+    width: calc(500px*3);
+    /* toutes mes photos font 500px  et je les veux cote à cote*/
+    margin: 10px auto;
+    /*marge entre mes blocs de 20px*/
+    animation: glisse 15s infinite;
+    /*je mets mon animation keyframes à 5sec en faisant une boucle*/
+}
+   
+.slides img {
+    width: 300px;
+}
+
+.slide { 
+    float: left; /*toutes mes photos doivent etre à gauche*/
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(-500px);
+    }
+    43% {
+        transform: translateX(-500px);
+    }
+    66% {
+        transform: translateX(-1000px);
+    }
+    76% {
+        transform: translateX(-1000px);
+    }
+    0% {
+        transform: translateX(0);
+    }
+}
+
+    
+/*footer *************************************************************************************************************/
+footer{
+    height : 10vh;
+    background-color: var(--color-pink);
+
 }
