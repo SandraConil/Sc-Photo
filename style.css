@@ -61,7 +61,6 @@ background-color: pink;
 
 /*main ***************************************************************************************************************/
 main{
-    margin-bottom: 30px;
     min-height: 70vh;
     background-color: var(--color-gray);
     }
@@ -90,14 +89,14 @@ h1, p {
 }
 /*slides ma gallerie photos du main*/
 .container-slider {
-    width: 500px;
+    width: 300px;
     /*car mes photos font 500px de large*/
     overflow: hidden;
     /*pour cacher mes autres photos sous la 1ere photo*/
 }
 .slides {
     display: flex;
-    width: calc(500px*3);
+    width: calc(300px*3);
     /* toutes mes photos font 500px  et je les veux cote à cote*/
     margin: 10px auto;
     /*marge entre mes blocs de 20px*/
@@ -140,10 +139,17 @@ h1, p {
     }
 }
 
+.grand-slide {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
     
 /*footer *************************************************************************************************************/
 footer{
-    height : 10vh;
+    height : 20vh;
     background-color: var(--color-pink);
 
 }
