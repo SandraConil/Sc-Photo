@@ -107,28 +107,24 @@ h1 {
 }
 
 
-/*slides ma gallerie photos du main*/
-.container-slider {
-    width: 500px;
-    /*car mes photos font 500px de large*/
-    overflow: hidden;
-    /*pour cacher mes autres photos sous la 1ere photo*/
-    
+/*slides*/ 
+.container-slider{
+    width: 300px; /*car mes photos font 500px de large*/
+    overflow: hidden; /*pour cacher mes autres photos sous la 1ere photo*/  
 }
-.slides {
-    display: flex;
-    width: calc(500px*3);
-    /* toutes mes photos font 500px  et je les veux cote à cote*/
-    margin: 10px auto;
-    /*marge entre mes blocs de 20px*/
-    animation: glisse 15s infinite;
-    /*je mets mon animation keyframes à 5sec en faisant une boucle*/
+.slides{ 
+    width: calc(300px*3);/* toutes mes photos font 500px  et je les veux cote à cote*/ 
+ margin: 20px auto; /*marge entre mes blocs de 10px*/
+ animation: glisse 15s infinite; /*je mets mon animation keyframes à 5sec en faisant une boucle*/
 }
-.slide {
-    display: flex;
-    justify-content: flex-start;
+.slides img {
+    width: 300px;
+}
+.slide { 
+    float: left; /*toutes mes photos doivent etre à gauche*/
     max-width: 100%;
 }
+
 @keyframes glisse {
     0% {
         transform: translateX(0);
@@ -152,7 +148,6 @@ h1 {
         transform: translateX(0);
     }
 }
-
 footer {
     width: 100vw;
     text-align: center;
