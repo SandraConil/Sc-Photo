@@ -1,105 +1,111 @@
 /*mes polices d'ecritures --Fonts*/
-@import url('https://fonts.googleapis.com/css2? family= Nunito:ital,wght@1,200 & family= Playfair+Display+SC:ital,wght@1,400;1,700 & display=swap');
-/*font-family: 'Nunito', sans-serif;    (pour ma barre de menu)
-font-family: 'Playfair Display SC', serif;*/
 
 /*mes Variables*/
 :root {
     --first-color-pink: rgba(156, 50, 85, 0.784);
     --second-color: rgb(16, 18, 17);
-    --third-color :rgb(124, 122, 122);
+    --third-color: #adadad;
+    --font-size: 1rem;
+    --titres: 'Courgette', sans empattement;
+    --textes: 'Nunito', sans empattement;
     --font-size: 1rem;
 }
 
-/*reset initialiser le Css et de tous selectionner mes elements*/
-*, ::before, ::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.container-grid{
-    height: 100vh; /*mon conteneur va faire une hauteur de 100%*/
-    width: 100%;
-    display: grid;
-    grid-template-columns:1fr 1fr; 
-    grid grid-template-rows: 300px 1fr 300px; /*faire 3lignes*/
+body {
+    width: 100vw;
+    background-color: #adadad;
 }
 
 header {
-    grid-column: span 4; /*prendre la largeur de mes 4 colonnes*/
-    padding: 200px;
-    background-image: url(pictures/header2_1024.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-   
-}
-main {
-    padding: 20px;
-    text-align: center;
-    
 
+    width: 90Vw;
+    height: 150px;
 }
-nav{
- background-color:var(--first-color-pink);
- grid-column: span 4;
 
- 
+.img-header {
+    width: 100vw;
+    /* background-size:100%; */
 }
-nav a{
-    justify-content: space-around;
-    flex-direction: row;
-    text-decoration: none;
-    background-color: rgba(0,0,0,0.2);
-    text-align: center;
-    box-sizing: border-box;
-    padding: 10px;
-    color: #FFF;
-    margin: 1px;
-    text-transform: capitalize;
-    
-}
-nav a:hover {
-background-color: var(--third-color);
-color: #000;
-transition: all 2s ease-in-out;
-}
- 
-/*mon logo*/
 .logo {
-width: 100%;
-height: 50px;
+    height: 40px;
+    
 }
-/*le centre de ma page */
+/* Sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8e8e8;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+  }
+  
+  /* Sidenav menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #111;
+  }
+  
+  .sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Active class */
+  .sidenav.active {
+    left: 0;
+  }
+  
+  /* Close btn */
+  .sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+  
+  /* Icône burger */
+  .burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
 main {
     padding: 40px;
     background-color: #adadad;
+    padding: 20px;
+    text-align: center;
 }
+
 h1 {
     margin-bottom: 15px;
-    font-family: Nunito, sans-serif;
-    font-size: 45px;
-   
-    
+    font-family: 'Courgette', cursive;
+    font-size: 20px;
 }
+
 .info {
     display: flex;
-    justify-items: center ;
+    justify-items: center;
+    font-family: var(--textes);
+    font-size: 10px;
+    background-color: var(--first-color-pink);
 }
-/*coté gauche*/
-/* aside {
-    padding: 50px;
-    background-color: #adadad;
-    display: flex;
-    justify-content: space-around;
-     
-}
-aside p {
-    height: 750px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
+
 
 /*slides ma gallerie photos du main*/
 .container-slider {
@@ -109,7 +115,6 @@ aside p {
     /*pour cacher mes autres photos sous la 1ere photo*/
     
 }
-
 .slides {
     display: flex;
     width: calc(500px*3);
@@ -119,53 +124,45 @@ aside p {
     animation: glisse 15s infinite;
     /*je mets mon animation keyframes à 5sec en faisant une boucle*/
 }
-
 .slide {
     display: flex;
     justify-content: flex-start;
     max-width: 100%;
 }
-
 @keyframes glisse {
     0% {
         transform: translateX(0);
     }
-
     10% {
         transform: translateX(0);
     }
-
     33% {
         transform: translateX(-500px);
     }
-
     43% {
         transform: translateX(-500px);
     }
-
     66% {
         transform: translateX(-1000px);
     }
-
     76% {
         transform: translateX(-1000px);
     }
-
     0% {
         transform: translateX(0);
     }
 }
 
-
 footer {
-    grid-column: span 4;
-    padding: 40px;
+    width: 100vw;
     text-align: center;
     background-color: var(--first-color-pink);
-    
+
 }
+
 .avatar {
-     height: 80px;
-     float: left;
-    
+    height: 20px;
+
+    /* float: left; */
+
 }
