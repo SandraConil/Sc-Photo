@@ -1,109 +1,58 @@
-/*mes polices d'ecritures --Fonts*/
+main{
+min-height: 70vh;
+}
+header{
+    position: relative;
+height : 15vh;
+}
+footer{
+    height : 10vh;
+    background-color: blueviolet;
 
-/*mes Variables*/
-:root {
-    --first-color-pink: rgba(156, 50, 85, 0.784);
-    --second-color: rgb(16, 18, 17);
-    --third-color: #adadad;
-    --font-size: 1rem;
-    --titres: 'Courgette', sans empattement;
-    --textes: 'Nunito', sans empattement;
-    --font-size: 1rem;
 }
 
-body {
-    width: 100vw;
-    background-color: #adadad;
+header img{
+    width : 100%;
+    max-height: 100%;
 }
 
-header {
-
-    width: 90Vw;
-    height: 150px;
-}
-
-.img-header {
-    width: 100vw;
-    /* background-size:100%; */
-}
-
-/*mon menu*/
-
-
-/*main*/
-main {
-    padding: 40px;
-    background-color: #adadad;
-    padding: 20px;
-    text-align: center;
-}
-
-h1 {
-    margin-bottom: 15px;
-    font-family: 'Courgette', cursive;
-    font-size: 20px;
-}
-
-.info {
+.menu_container{
+    position:absolute;
+    bottom : 0;
+    height : 40px;
+    width : 40px;
+    background-color: pink;
     display: flex;
-    justify-items: center;
-    font-family: var(--textes);
-    font-size: 10px;
-    background-color: var(--first-color-pink);
+    flex-direction: column;
+    justify-content: space-around;
 }
 
-
-/*slides*/ 
-.container-slider{
-    width: 300px; /*car mes photos font 500px de large*/
-    overflow: hidden; /*pour cacher mes autres photos sous la 1ere photo*/  
-}
-.slides{ 
-    width: calc(300px*3);/* toutes mes photos font 500px  et je les veux cote à cote*/ 
- margin: 20px auto; /*marge entre mes blocs de 10px*/
- animation: glisse 15s infinite; /*je mets mon animation keyframes à 5sec en faisant une boucle*/
-}
-.slides img {
-    width: 300px;
-}
-.slide { 
-    float: left; /*toutes mes photos doivent etre à gauche*/
-    max-width: 100%;
+.barre{
+    border-bottom: 5px solid;
+width : 80%;
+border-radius: 100%;
 }
 
-@keyframes glisse {
-    0% {
-        transform: translateX(0);
-    }
-    10% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(-500px);
-    }
-    43% {
-        transform: translateX(-500px);
-    }
-    66% {
-        transform: translateX(-1000px);
-    }
-    76% {
-        transform: translateX(-1000px);
-    }
-    0% {
-        transform: translateX(0);
-    }
-}
-footer {
-    width: 100vw;
-    text-align: center;
-    background-color: var(--first-color-pink);
+main nav{
+    height : 70vh;
+    display : none;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.avatar {
-    height: 20px;
+main nav ul{
+    height: 100%;
+    width : 100%;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+background-color: pink;
 
-    /* float: left; */
+    /* justify-content: center; */
+}
 
+.toggle{
+    display:flex;
 }
