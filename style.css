@@ -3,6 +3,7 @@
     --color-pink: rgb(177, 97, 137);
     --color-gray: rgb(179, 177, 177);
     --text-h1:'Dancing Script', cursive ;
+    --text:'Crimson Text', serif ;
 }
 
 body {
@@ -74,16 +75,20 @@ h1 {
     font-family : var(--text-h1) ;
 
 }
-
-h1,
-p {
+p, .info, .studio {
+    font-family: var(--text);
+}
+h1, p, .info, .studio, .text-deroulement{ /*je centre tous mes textes*/
     text-align: center;
-
 }
 
 .studio {
-    font-size: 18px;
+    font-size: 25px;
     text-align: center;
+    margin-top: 15px;
+}
+p {
+    font-size: 20px;
 }
 
 .container-slider {
@@ -106,17 +111,13 @@ p {
    
 }
 
-
-.informations {
-    /*dernier texte de main sur la presentation d'un shooting*/
-    margin: 30px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 15px;
+.incursive { /*texte avant le texte info du slide */
+    font-family: var(--text-h1);
+    font-size: 25px;
+    margin: 20px;
 }
 
-/*boutons tarifs*/
+/*boutons*/
 a {
     text-decoration: none;
     margin: 5px 30px;
@@ -124,8 +125,6 @@ a {
     color: black;
     text-shadow: var(--color-pink) 1px 0 10px;
     font-family: var(--text-h1);
-
-
 }
 
 button {
@@ -207,6 +206,17 @@ button {
     }
 
 }
+
+.container-text-explications {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-deroulement{
+    /*dernier texte de main sur la presentation d'un shooting*/
+    margin: 30px 30px;
+ }
 
 
 /*footer *************************************************************************************************************/
