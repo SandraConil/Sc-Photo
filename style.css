@@ -1,104 +1,119 @@
 /*mes variables*/
 :root {
-    --color-pink : rgb(174, 86, 130);
-    --color-gray :rgb(156, 152, 152); 
+    --color-pink: rgb(177, 97, 137);
+    --color-gray: rgb(179, 177, 177);
+    --text-h1:'Dancing Script', cursive ;
 }
 
-/*font*/
-@font-face{
-    font-family: Cougette;
+body {
+    background: linear-gradient(var(--color-pink), var(--color-gray));
 }
 
-header{
+/*header********************************************************************************************/
+header {
     position: relative;
-height : 15vh;
+    height: 15vh;
 }
 
-header img{
-    width : 100%;
+header img {
+    width: 100%;
     max-height: 100%;
 }
 
-.menu_container{
-    position:absolute;
-    bottom : 0;
-    height : 40px;
-    width : 40px;
+/*menu**********************************************************************************************/
+.menu_container {
+    position: absolute;
+    bottom: 0;
+    height: 40px;
+    width: 40px;
     background-color: var(--color-pink);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.barre{
+.barre {
     border-bottom: 5px solid;
-width : 80%;
-border-radius: 100%;
+    width: 80%;
+    border-radius: 100%;
 }
 
-main nav{
-    height : 70vh;
-    display : none;
+main nav {
+    height: 70vh;
+    display: none;
     justify-content: center;
     align-items: center;
 
 }
 
-main nav ul{
+main nav ul {
     height: 100%;
-    width : 100%;
-    display : flex;
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-background-color: var(--color-pink);
+    background-color: var(--color-pink);
 
 }
 
-.toggle{
-    display:flex;
+.toggle {
+    display: flex;
 }
 
 /*main ***************************************************************************************************************/
-main{
+main {
     min-height: 70vh;
-   background:linear-gradient(var(--color-pink), var(--color-gray));;
-    }
+
+}
 
 h1 {
-font-size: 30px;
-padding-top: 20px ; /*ma marge entre mon header et mon titre*/
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    padding-top: 30px;
+    /*ma marge entre mon header et mon titre*/
+    font-family : var(--text-h1) ;
+
 }
-h1, p {
- text-align: center;
+
+h1,
+p {
+    text-align: center;
+
 }
+
 .studio {
     font-size: 18px;
     text-align: center;
 }
 
-.container-slider{
-    border: 2px solid;
+.container-slider {
+   
     margin: 20px; /*marge entre mes blocs*/
+    
+}
+
+.bloc-texte-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--color-pink);
+   border: 2px solid var(--color-gray);
+    
+}
+.info p { /*texte dans mes contenairs slides*/
+    text-align: center;
+    letter-spacing: .2rem;
+   
 }
 
-.bloc-texte-main {
-       
-}
-.info {
-  
-    text-align: center;  
-    margin: 30px 30px; /*espace de 30px haut cote bas*/
-}
 
-.informations { /*dernier texte de main sur la presentation d'un shooting*/
-    /* text-align: center; */
-   margin: 30px 30px;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
+.informations {
+    /*dernier texte de main sur la presentation d'un shooting*/
+    margin: 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
 }
 
 /*boutons tarifs*/
@@ -108,17 +123,17 @@ a {
     font-size: 20px;
     color: black;
     text-shadow: var(--color-pink) 1px 0 10px;
+    font-family: var(--text-h1);
 
-        
+
 }
 
 button {
     display: flex;
     align-items: flex-start;
-    margin: 20px auto;
+    margin: 10px auto;
     border: 2px solid;
     background-color: var(--color-gray);
-    
 }
 
 
@@ -131,25 +146,32 @@ button {
 }
 
 .container-slider {
-    width: 300px; /*car mes photos font 300px de large*/
-    overflow: hidden; /*pour cacher mes autres photos sous la 1ere photo*/
+    width: 300px;
+    /*car mes photos font 300px de large*/
+    overflow: hidden;
+    /*pour cacher mes autres photos sous la 1ere photo*/
 }
+
 .slides {
     display: flex;
-    width: calc(300px*3);  /* toutes mes photos font 300px  et je les veux cote à cote*/
-    margin: 20px auto; /*marge entre mes blocs de 20px*/
-    animation: glisse 15s infinite;  /*je mets mon animation keyframes à 5sec en faisant une boucle*/
+    width: calc(300px*3);
+    /* toutes mes photos font 300px  et je les veux cote à cote*/
+    margin: 20px auto;
+    /*marge entre mes blocs de 20px*/
+    animation: glisse 15s infinite;
+    /*je mets mon animation keyframes à 5sec en faisant une boucle*/
 }
-   
+
 .slides img {
     width: 280px;
     border-radius: 5%;
-    
-   
+
+
 }
 
-.slide { 
-    float: left; /*toutes mes photos doivent etre à gauche*/
+.slide {
+    float: left;
+    /*toutes mes photos doivent etre à gauche*/
     max-width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -159,31 +181,36 @@ button {
     0% {
         transform: translateX(0);
     }
+
     10% {
         transform: translateX(0);
     }
+
     33% {
         transform: translateX(-500px);
     }
+
     43% {
         transform: translateX(-500px);
     }
+
     66% {
         transform: translateX(-1000px);
     }
+
     76% {
         transform: translateX(-1000px);
     }
+
     0% {
         transform: translateX(0);
     }
-    
+
 }
 
 
-    
 /*footer *************************************************************************************************************/
-footer{
-    height : 25vh;
-    background-color: var(--color-pink);
+footer {
+    margin-top: 50px;
+    min-height: 30vh;
 }
