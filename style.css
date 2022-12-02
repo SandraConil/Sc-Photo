@@ -51,7 +51,7 @@ main nav ul{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-background-color: pink;
+background-color: var(--color-pink);
 
 }
 
@@ -62,7 +62,7 @@ background-color: pink;
 /*main ***************************************************************************************************************/
 main{
     min-height: 70vh;
-    background-color: var(--color-gray);
+   background:linear-gradient(var(--color-pink), var(--color-gray));;
     }
 
 h1 {
@@ -78,34 +78,74 @@ h1, p {
     text-align: center;
 }
 
+.container-slider{
+    border: 2px solid;
+    margin: 20px; /*marge entre mes blocs*/
+    background-color: var(--color-pink);
+}
+
 .bloc-texte-main {
        
 }
 .info {
   
-    text-align: center;
-    
-   
+    text-align: center;  
+    margin: 30px 30px; /*espace de 30px haut cote bas*/
 }
-/*slides ma gallerie photos du main*/
+
+.informations { /*dernier texte de main sur la presentation d'un shooting*/
+    /* text-align: center; */
+   margin: 30px 30px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+}
+
+/*boutons tarifs*/
+a {
+    text-decoration: none;
+    margin: 5px 30px;
+    font-size: 20px;
+    color: black;
+    text-shadow: var(--color-pink) 1px 0 10px;
+
+        
+}
+
+button {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px auto;
+    border: 2px solid;
+    background-color: var(--color-gray);
+    
+}
+
+
+/*slides ma gallerie photos du main**************************/
+.grand-slide {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .container-slider {
-    width: 300px;
-    /*car mes photos font 500px de large*/
-    overflow: hidden;
-    /*pour cacher mes autres photos sous la 1ere photo*/
+    width: 300px; /*car mes photos font 300px de large*/
+    overflow: hidden; /*pour cacher mes autres photos sous la 1ere photo*/
 }
 .slides {
     display: flex;
-    width: calc(300px*3);
-    /* toutes mes photos font 500px  et je les veux cote à cote*/
-    margin: 10px auto;
-    /*marge entre mes blocs de 20px*/
-    animation: glisse 15s infinite;
-    /*je mets mon animation keyframes à 5sec en faisant une boucle*/
+    width: calc(300px*3);  /* toutes mes photos font 300px  et je les veux cote à cote*/
+    margin: 20px auto; /*marge entre mes blocs de 20px*/
+    animation: glisse 15s infinite;  /*je mets mon animation keyframes à 5sec en faisant une boucle*/
 }
    
 .slides img {
-    width: 300px;
+    width: 280px;
+    border-radius: 5%;
+    
+   
 }
 
 .slide { 
@@ -137,14 +177,9 @@ h1, p {
     0% {
         transform: translateX(0);
     }
+    
 }
 
-.grand-slide {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
     
 /*footer *************************************************************************************************************/
