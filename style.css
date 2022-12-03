@@ -1,6 +1,6 @@
 /*mes variables*/
 :root {
-    --color-pink: rgb(177, 97, 137);
+    --color-pink: rgb(193, 108, 151);
     --color-gray: rgb(179, 177, 177);
     --text-h1:'Dancing Script', cursive ;
     --text:'Crimson Text', serif ;
@@ -91,7 +91,7 @@ main {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 3rem;
     padding-top: 30px;
     /*ma marge entre mon header et mon titre*/
     font-family : var(--text-h1) ;
@@ -113,38 +113,38 @@ p {
     font-size: 20px;
 }
 
-.container-slider {
-   
-    margin: 20px; /*marge entre mes blocs*/
-    
-}
-
-.bloc-texte-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--color-pink);
-   border: 2px solid var(--color-gray);
-    
-}
 .info p { /*texte dans mes contenairs slides*/
     text-align: center;
-    letter-spacing: .2rem;
-   
+    letter-spacing: .2rem;  
 }
 
 .incursive { /*texte avant le texte info du slide */
     font-family: var(--text-h1);
-    font-size: 25px;
-    margin: 20px;
+    font-size: 1.8rem;
+    margin-bottom: 40px;
 }
 
-/* page tournante tarif side*/
+.container-slider {
+    width: 100%;
+}
+
+.bloc-texte-main{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   background-color: var(--color-pink);
+  border: 2px solid var(--color-gray);
+  padding: 30px 50px ;
+
+   
+}
+
+/* page tournante tarif side*************************   MAIN   ************************************************************/
 .card-container {
-    width: 230px;
+    width: 200px;
     height: 50px;
     position: relative;  /* pour positionner mes cartes par rapport à mon conteneur*/
-    margin: 0 auto; /*pour centrer ma div */
+    margin: 20px auto; /*pour centrer ma div */
 }
 .card {
     width: 100%; /*ma carte prend la taille de 100% de mon container card*/
@@ -159,11 +159,12 @@ p {
     height: 100%;
     position: absolute;
     backface-visibility: hidden; /*quand je suis face avant ca cache la face arriere et vise versa*/
-    border-radius: 15px;
+   
 }
 .side--front{ /*carte devant*/
     background-color:var(--color-gray);
     z-index: 1;/*mettre ma carte recto en 1ere position*/
+    border-radius: 15px;
     
 }
 .side--back{ /*carte derriere*/
@@ -179,36 +180,20 @@ p {
     color: white;
 }
 .tarif{
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-family: var(--text-h1);
     color: var(--color-pink);
     text-shadow: 2px 3px 15px white;
+    text-align: center;
+    padding: 8px;
 }
 .info-prix{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: var(--text);
 }
 
-/* boutons
-a {
-    text-decoration: none;
-    margin: 5px 30px;
-    font-size: 20px;
-    color: black;
-    text-shadow: var(--color-pink) 1px 0 10px;
-    font-family: var(--text-h1);
-}
 
-button {
-    display: flex;
-    align-items: flex-start;
-    margin: 10px auto;
-    border: 2px solid;
-    background-color: var(--color-gray);
-} */
-
-
-/*slides ma gallerie photos du main**************************/
+/*slides ma gallerie photos du main*****************************************/
 .grand-slide {
     max-width: 100%;
     display: flex;
@@ -279,11 +264,6 @@ button {
 
 }
 
-.container-text-explications {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .text-deroulement{
     /*dernier texte de main sur la presentation d'un shooting*/
@@ -292,13 +272,12 @@ button {
 
 
 /*footer *************************************************************************************************************/
-/* footer {
-    margin-top: 50px;
-    min-height: 30vh;
-} */
-.photo-footer{
-    width: 100%;
-}
-.fond-footer{
-
+footer {
+    min-height: 20vh;
+    background-color: var(--color-pink);
+    
+} 
+.copyright{
+    font-size: 0.9rem;
+    padding: 20px;
 }
