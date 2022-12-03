@@ -37,7 +37,29 @@ header img {
     border-bottom: 5px solid;
     width: 80%;
     border-radius: 100%;
+    transition: all 1s ease-in-out;
 }
+/* .barre btn active:nth-child(1){
+    top: 0px;
+}
+.barre:nth-child(2){
+    top: 10px;
+}
+.barre:nth-child(3){
+    top: 20px;
+}
+.active .barre:nth-child(1){
+    top: 12px;
+    transform: rotate(135deg);
+}
+.active .barre:nth-child(2){
+    opacity: 0;
+    transform: rotate(-20px);
+}
+.active .barre:nth-child(3){
+    top: 12px;
+    transform: rotate(-135px);
+} */
 
 main nav {
     height: 70vh;
@@ -117,7 +139,57 @@ p {
     margin: 20px;
 }
 
-/*boutons*/
+/* page tournante tarif side*/
+.card-container {
+    width: 230px;
+    height: 50px;
+    position: relative;  /* pour positionner mes cartes par rapport à mon conteneur*/
+    margin: 0 auto; /*pour centrer ma div */
+}
+.card {
+    width: 100%; /*ma carte prend la taille de 100% de mon container card*/
+    height: 100%;
+    position: absolute;  /*pour que ma carte se positionne dans mon conteneur*/
+    box-shadow: 0px 5px 15px; /*15 px de flou*/
+    transition: transform 500ms ease-in-out; /*pour que ma carte se tourne en durée de 500 millisecondes*/
+    transform-style: preserve-3d; /*pour que ma carte 2D passe en 3D*/
+}
+.side{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /*quand je suis face avant ca cache la face arriere et vise versa*/
+    border-radius: 15px;
+}
+.side--front{ /*carte devant*/
+    background-color:var(--color-gray);
+    z-index: 1;/*mettre ma carte recto en 1ere position*/
+    
+}
+.side--back{ /*carte derriere*/
+    background-color: var(--color-gray);
+    transform: rotateY(180deg); /*pour qu'elle tourne de 180degrés*/
+}
+.card:hover{ /*mon animation de rotation quand on survol la carte et ajouter du style*/
+    transform: rotateY(180deg);
+}
+.prix{
+    font-size: 1rem;
+    font-family: var(--text);
+    color: white;
+}
+.tarif{
+    font-size: 2rem;
+    font-family: var(--text-h1);
+    color: var(--color-pink);
+    text-shadow: 2px 3px 15px white;
+}
+.info-prix{
+    font-size: 1rem;
+    font-family: var(--text);
+}
+
+/* boutons
 a {
     text-decoration: none;
     margin: 5px 30px;
@@ -133,7 +205,7 @@ button {
     margin: 10px auto;
     border: 2px solid;
     background-color: var(--color-gray);
-}
+} */
 
 
 /*slides ma gallerie photos du main**************************/
@@ -220,7 +292,13 @@ button {
 
 
 /*footer *************************************************************************************************************/
-footer {
+/* footer {
     margin-top: 50px;
     min-height: 30vh;
+} */
+.photo-footer{
+    width: 100%;
+}
+.fond-footer{
+
 }
