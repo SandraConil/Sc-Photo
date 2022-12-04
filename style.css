@@ -8,6 +8,7 @@
 
 body {
     background: linear-gradient(var(--color-pink), var(--color-gray));
+   
 }
 
 /*header********************************************************************************************/
@@ -22,66 +23,72 @@ header img {
 }
 
 /*menu**********************************************************************************************/
-.menu_container {
-    position: absolute;
-    bottom: 0;
+.nav-toogle{
+    position: fixed; 
+    z-index: 1; /* pour que le bouton reste toujours au dessus*/
+    top: 70px;
     height: 40px;
     width: 40px;
-    background-color: var(--color-pink);
+    background-color: transparent; /*pour mettre mon bouton en transparence*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    border: none;
+    cursor: pointer;
 }
 
 .barre {
+    position: absolute;
+    display: block;
     border-bottom: 5px solid;
-    width: 80%;
-    border-radius: 100%;
-    transition: all 1s ease-in-out;
-}
-/* .barre btn active:nth-child(1){
-    top: 0px;
-}
-.barre:nth-child(2){
-    top: 10px;
-}
-.barre:nth-child(3){
-    top: 20px;
-}
-.active .barre:nth-child(1){
-    top: 12px;
-    transform: rotate(135deg);
-}
-.active .barre:nth-child(2){
-    opacity: 0;
-    transform: rotate(-20px);
-}
-.active .barre:nth-child(3){
-    top: 12px;
-    transform: rotate(-135px);
-} */
-
-main nav {
-    height: 70vh;
-    display: none;
-    justify-content: center;
-    align-items: center;
-
-}
-
-main nav ul {
-    height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--color-pink);
-
+    /* border-radius: 100%; */
+    background: var(--color-pink);
+    height: 2px;
+}
+/*pour eviter que les 3 barres soient les unes sur les autres*/
+.l1 { /*pour monter mes 3 barres pour eviter qu'elles soient les unes sur les autres*/
+    transform: translateY(-10px);
+}
+.l3 {
+    transform: translateY(+10px);
 }
 
-.toggle {
-    display: flex;
+/*pour faire la croix*/
+.nav-toogle.active .l1{
+    transform: translateY(0px) rotate(135deg);
+}
+.nav-toogle.active .l2{
+    opacity: 0; /*pour que la barre du centre dispararait*/ 
+}
+.nav-toogle.active .l3{
+    transform: translateY(0px) rotate(-135deg);
+}
+
+/*personalisation du texte menu*/
+nav {
+        width: 100vw;
+    min-height: 70vh;
+        display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    border-bottom: 2px solid var(--color-gray);
+    transform: translateY(-100%); /*pour le faire disparaitre qand on clic sur la
+    /* transition: transform 0.3s cubic-bezier(.76,.23,.61,.76); */
+}
+
+nav.active {
+    transform: translate(0);
+
+}
+nav a {
+    font-family: var(--text-h1);
+    font-size: 2rem;
+    color: var(--color-gray);
+    text-decoration: none;
+    margin: 35px;
 }
 
 /*main ***************************************************************************************************************/
@@ -89,7 +96,6 @@ main {
     min-height: 70vh;
 
 }
-
 h1 {
     font-size: 3rem;
     padding-top: 30px;
@@ -134,9 +140,12 @@ p {
    align-items: center;
    background-color: var(--color-pink);
   border: 2px solid var(--color-gray);
-  padding: 30px 50px ;
+  padding: 30px 50px ;  
+  border-radius: 10px 100px / 120px;
+}
 
-   
+.ombre {
+    text-shadow:1px 0 10px rgb(211, 209, 210);
 }
 
 /* page tournante tarif side*************************   MAIN   ************************************************************/
@@ -145,6 +154,7 @@ p {
     height: 50px;
     position: relative;  /* pour positionner mes cartes par rapport à mon conteneur*/
     margin: 20px auto; /*pour centrer ma div */
+    
 }
 .card {
     width: 100%; /*ma carte prend la taille de 100% de mon container card*/
@@ -153,12 +163,14 @@ p {
     box-shadow: 0px 5px 15px; /*15 px de flou*/
     transition: transform 500ms ease-in-out; /*pour que ma carte se tourne en durée de 500 millisecondes*/
     transform-style: preserve-3d; /*pour que ma carte 2D passe en 3D*/
+    border-radius: 25% 10%;
 }
 .side{
     width: 100%;
     height: 100%;
     position: absolute;
     backface-visibility: hidden; /*quand je suis face avant ca cache la face arriere et vise versa*/
+  
    
 }
 .side--front{ /*carte devant*/
@@ -170,6 +182,7 @@ p {
 .side--back{ /*carte derriere*/
     background-color: var(--color-gray);
     transform: rotateY(180deg); /*pour qu'elle tourne de 180degrés*/
+   
 }
 .card:hover{ /*mon animation de rotation quand on survol la carte et ajouter du style*/
     transform: rotateY(180deg);
@@ -270,6 +283,30 @@ p {
     margin: 30px 30px;
  }
 
+ .mailto {
+    color:black);
+    box-sizing: content-box;
+width: 100%;
+}
+
+button {
+    background-color: var(--color-pink);
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 120px;
+    height: 40px;
+    margin: 20px auto;
+    border-radius: 25% 10%;
+    
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    margin-top: 8px;
+}
+
 
 /*footer *************************************************************************************************************/
 footer {
@@ -281,3 +318,7 @@ footer {
     font-size: 0.9rem;
     padding: 20px;
 }
+
+
+
+@media (min-700px)

@@ -1,8 +1,27 @@
-// lorsque on clique sur menu_container alors on affiche notre menu
+// pour rendre ma nav active
 
-let burger = document.querySelector('.menu_container');
-let menu = document.querySelector('.nav_menu');
+//1. je crée une variable pour l'icone burger en recuperant le nom de la classe de mon html qui est nav-toogle
 
-burger.addEventListener('click', function(){
-    menu.classList.toggle('toggle');
-});
+ let iconeBurger = document.querySelector(".nav-toogle")
+
+ //2. je crée une variable navigation en recuperant la class nav menu
+
+ let navigation = document.querySelector("nav")
+
+ //3. j'ajoute un evenement quand on clic sur les 3 barres. 
+ iconeBurger.addEventListener("click",toogleNav)
+
+ //4. je crée la fonction de toogleNav que j'ai mis au dessus
+ // et j'ajoute la fonction pour la navigation en fonction qu'on clic sur le menu
+ 
+ function toogleNav(){
+    iconeBurger.classList.toggle("active")
+    navigation.classList.toggle("active") 
+ }
+
+
+
+
+
+
+

@@ -26,14 +26,14 @@
 <body>
     <header>
         <img src="pictures/header2_1024.jpg" alt="">
-        <div class="menu_container">
-            <div class="barre active"></div>
-            <div class="barre active"></div>
-            <div class="barre active"></div>
-        </div>
+        <button class="nav-toogle" type="button" aria-label="toggle curtain navigation">
+            <span class="barre l1"></span>
+            <span class="barre l2"></span>    <!-- on ne met pas de div dans un bouton selon caninclude-->
+            <span class="barre l3"></span>
+        </button >
     </header>
     <main>
-        <nav class="nav_menu">
+        <nav>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#grossesse">Grossesse</a></li>
@@ -42,11 +42,11 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-
-        <h1 id="accueil"> <strong>Sandra Conil</strong></h1> <br>
+              
+        <h1 id="accueil"> <strong class="ombre">Sandra Conil</strong></h1> <br>
         <p>Photographe à domicile</p><br>
         <p> 06.27.85.06.54</p><br>
-        <p>Votre studio chez <br> vous afin d'immortaliser <br> vos plus belles émotions.</p>
+        <p class="ombre">Restez chez vous, <br> je m'occupe de tout.</p>
 
         <div class="grand-slide">
             <div id="grossesse" class="container-slider">
@@ -56,7 +56,7 @@
                     <img class="slide" src="pictures/couple3.jpg" alt="grossesse">
                 </div>
                 <div class="bloc-texte-main">
-                    <p class="incursive"><strong>En attendant bébé.<br></strong></p>
+                    <p class="incursive"><strong class="ombre">En attendant bébé.<br></strong></p>
                     <p class="info"> L'ideal étant de faire la séance photo à partir de 7 mois de grossesse. Si vous
                         attendez des
                         jumeaux, la séance est conseillée à 5 / 6 mois de grossesse.</p>
@@ -84,7 +84,7 @@
                     <img class="slide" src="pictures/bebe3.jpg" alt="naissance">
                 </div>
                 <div class="bloc-texte-main">
-                    <p class="incursive"><strong>Ca y est bébé est là.</strong> <br>
+                    <p class="incursive"><strong class="ombre">Ca y est bébé est là.</strong> <br>
                     <p class="info">
                         Vous souhaitez immortaliser vote bébé qui grandit beaucoup trop vite ? <br>
                         Selon vos souhaits, je peux faire des photos avec les membres de la famille.
@@ -112,7 +112,7 @@
                     <img class="slide" src="pictures/enfant5.jpg" alt="enfant">
                 </div>
                 <div class="bloc-texte-main">
-                    <p class="incursive"><strong><strong> P'tit bout de choux qui grandit.</strong><br>
+                    <p class="incursive"><strong class="ombre"> P'tit bout de choux qui grandit.</strong><br>
                             <p class="info"> Les séances enfants sont destinées aux enfants à partir de 2 ans.
                             </p>
 
@@ -133,15 +133,16 @@
             </div>
         </div>
         <div class="container-text-explications">
-            <p class="text-deroulement"> <strong> La séance photo se déroule à votre domicile.</strong>
+            <p class="text-deroulement"> La séance photo se déroule à votre domicile.
                 Pour les shootings, je mets à votre disposition de nombreux
                 accessoires tels que des ailes de papillon, transat, lit pour les nouveaux né.
                 Je vous propose aussi plusieurs fonds.
                 Lors de mes séances photos, tous les membres de la familles sont les bienvenus.
             </p>
+            <p id="contact">06.27.85.06.54</p>
             <button>
-                <a href="#contact"> Contactez - moi</a>
-            </button>
+                <a class="mailto" href="mailto:sandraconil77@gmail.com"> Contactez - moi</a>
+                </button>
         </div>
     </main>
 
