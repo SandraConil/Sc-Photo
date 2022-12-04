@@ -1,14 +1,19 @@
 /*mes variables*/
 :root {
-    --color-pink: rgb(193, 108, 151);
+    --color-pink: rgb(215, 92, 154);
     --color-gray: rgb(179, 177, 177);
-    --text-h1:'Dancing Script', cursive ;
-    --text:'Crimson Text', serif ;
+    --text-h1: 'Dancing Script', cursive;
+    --text: 'Crimson Text', serif;
+    --color-text :white; 
 }
 
 body {
-    background: linear-gradient(var(--color-pink), var(--color-gray));
-   
+    /* background: linear-gradient(var(--color-pink), var(--color-gray)); */
+    background-color: var(--color-pink);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23DF1CA3'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23DB96C9' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23DB96C9' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.42'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+
 }
 
 /*header********************************************************************************************/
@@ -23,13 +28,15 @@ header img {
 }
 
 /*menu**********************************************************************************************/
-.nav-toogle{
-    position: fixed; 
-    z-index: 1; /* pour que le bouton reste toujours au dessus*/
-    top: 70px;
+.nav-toogle {
+    position: fixed;
+    z-index: 1;
+    /* pour que le bouton reste toujours au dessus*/
+    top: -8px;
     height: 40px;
     width: 40px;
-    background-color: transparent; /*pour mettre mon bouton en transparence*/
+    background-color: transparent;
+    /*pour mettre mon bouton en transparence*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -46,36 +53,43 @@ header img {
     background: var(--color-pink);
     height: 2px;
 }
+
 /*pour eviter que les 3 barres soient les unes sur les autres*/
-.l1 { /*pour monter mes 3 barres pour eviter qu'elles soient les unes sur les autres*/
+.l1 {
+    /*pour monter mes 3 barres pour eviter qu'elles soient les unes sur les autres*/
     transform: translateY(-10px);
 }
+
 .l3 {
     transform: translateY(+10px);
 }
 
 /*pour faire la croix*/
-.nav-toogle.active .l1{
+.nav-toogle.active .l1 {
     transform: translateY(0px) rotate(135deg);
 }
-.nav-toogle.active .l2{
-    opacity: 0; /*pour que la barre du centre dispararait*/ 
+
+.nav-toogle.active .l2 {
+    opacity: 0;
+    /*pour que la barre du centre dispararait*/
 }
-.nav-toogle.active .l3{
+
+.nav-toogle.active .l3 {
     transform: translateY(0px) rotate(-135deg);
 }
 
 /*personalisation du texte menu*/
 nav {
-        width: 100vw;
+    width: 100vw;
     min-height: 70vh;
-        display: flex;
-    justify-content:space-around;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
     background: transparent;
     border-bottom: 2px solid var(--color-gray);
-    transform: translateY(-100%); /*pour le faire disparaitre qand on clic sur la
+    transform: translateY(-200%);
+    /*pour le faire disparaitre qand on clic sur la
     /* transition: transform 0.3s cubic-bezier(.76,.23,.61,.76); */
 }
 
@@ -83,6 +97,7 @@ nav.active {
     transform: translate(0);
 
 }
+
 nav a {
     font-family: var(--text-h1);
     font-size: 2rem;
@@ -96,17 +111,30 @@ main {
     min-height: 70vh;
 
 }
+
 h1 {
     font-size: 3rem;
     padding-top: 30px;
     /*ma marge entre mon header et mon titre*/
-    font-family : var(--text-h1) ;
+    font-family: var(--text-h1);
+    color: var(--color-text);
+    
 
 }
-p, .info, .studio {
+
+p,
+.info,
+.studio {
     font-family: var(--text);
+    color: var(--color-text);
 }
-h1, p, .info, .studio, .text-deroulement{ /*je centre tous mes textes*/
+
+h1,
+p,
+.info,
+.studio,
+.text-deroulement {
+    /*je centre tous mes textes*/
     text-align: center;
 }
 
@@ -114,17 +142,22 @@ h1, p, .info, .studio, .text-deroulement{ /*je centre tous mes textes*/
     font-size: 25px;
     text-align: center;
     margin-top: 15px;
+    color: var(--color-text);
 }
+
 p {
     font-size: 20px;
+    color: var(--color-text);
 }
 
-.info p { /*texte dans mes contenairs slides*/
+.info p {
+    /*texte dans mes contenairs slides*/
     text-align: center;
-    letter-spacing: .2rem;  
+    letter-spacing: .2rem;
 }
 
-.incursive { /*texte avant le texte info du slide */
+.incursive {
+    /*texte avant le texte info du slide */
     font-family: var(--text-h1);
     font-size: 1.8rem;
     margin-bottom: 40px;
@@ -134,73 +167,95 @@ p {
     width: 100%;
 }
 
-.bloc-texte-main{
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   background-color: var(--color-pink);
-  border: 2px solid var(--color-gray);
-  padding: 30px 50px ;  
-  border-radius: 10px 100px / 120px;
+.bloc-texte-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-pink);
+    border: 2px solid var(--color-gray);
+    padding: 30px 50px;
+    border-radius: 10px 100px / 120px;
 }
 
 .ombre {
-    text-shadow:1px 0 10px rgb(211, 209, 210);
+    text-shadow: 1px 0 15px rgb(15, 14, 15);
 }
 
 /* page tournante tarif side*************************   MAIN   ************************************************************/
 .card-container {
     width: 200px;
     height: 50px;
-    position: relative;  /* pour positionner mes cartes par rapport à mon conteneur*/
-    margin: 20px auto; /*pour centrer ma div */
-    
+    position: relative;
+    /* pour positionner mes cartes par rapport à mon conteneur*/
+    margin: 20px auto;
+    /*pour centrer ma div */
+
 }
+
 .card {
-    width: 100%; /*ma carte prend la taille de 100% de mon container card*/
+    width: 100%;
+    /*ma carte prend la taille de 100% de mon container card*/
     height: 100%;
-    position: absolute;  /*pour que ma carte se positionne dans mon conteneur*/
-    box-shadow: 0px 5px 15px; /*15 px de flou*/
-    transition: transform 500ms ease-in-out; /*pour que ma carte se tourne en durée de 500 millisecondes*/
-    transform-style: preserve-3d; /*pour que ma carte 2D passe en 3D*/
+    position: absolute;
+    /*pour que ma carte se positionne dans mon conteneur*/
+    box-shadow: 0px 5px 15px;
+    /*15 px de flou*/
+    transition: transform 500ms ease-in-out;
+    /*pour que ma carte se tourne en durée de 500 millisecondes*/
+    transform-style: preserve-3d;
+    /*pour que ma carte 2D passe en 3D*/
     border-radius: 25% 10%;
 }
-.side{
+
+.side {
     width: 100%;
     height: 100%;
     position: absolute;
-    backface-visibility: hidden; /*quand je suis face avant ca cache la face arriere et vise versa*/
-  
-   
+    backface-visibility: hidden;
+    /*quand je suis face avant ca cache la face arriere et vise versa*/
+
+
 }
-.side--front{ /*carte devant*/
-    background-color:var(--color-gray);
-    z-index: 1;/*mettre ma carte recto en 1ere position*/
-    border-radius: 15px;
-    
-}
-.side--back{ /*carte derriere*/
+
+.side--front {
+    /*carte devant*/
     background-color: var(--color-gray);
-    transform: rotateY(180deg); /*pour qu'elle tourne de 180degrés*/
-   
+    z-index: 1;
+    /*mettre ma carte recto en 1ere position*/
+    border-radius: 15px;
+
 }
-.card:hover{ /*mon animation de rotation quand on survol la carte et ajouter du style*/
+
+.side--back {
+    /*carte derriere*/
+    background-color: var(--color-gray);
+    transform: rotateY(180deg);
+    /*pour qu'elle tourne de 180degrés*/
+
+}
+
+.card:hover {
+    /*mon animation de rotation quand on survol la carte et ajouter du style*/
     transform: rotateY(180deg);
 }
-.prix{
+
+.prix {
     font-size: 1rem;
     font-family: var(--text);
     color: white;
 }
-.tarif{
+
+.tarif {
     font-size: 2.3rem;
     font-family: var(--text-h1);
     color: var(--color-pink);
-    text-shadow: 2px 3px 15px white;
+    text-shadow: 2px 3px 15px rgb(6, 6, 6);
     text-align: center;
     padding: 8px;
+    color: var(--color-text);
 }
-.info-prix{
+
+.info-prix {
     font-size: 1.1rem;
     font-family: var(--text);
 }
@@ -278,15 +333,15 @@ p {
 }
 
 
-.text-deroulement{
+.text-deroulement {
     /*dernier texte de main sur la presentation d'un shooting*/
     margin: 30px 30px;
- }
+}
 
- .mailto {
-    color:black);
+.mailto {
+    color: black;
     box-sizing: content-box;
-width: 100%;
+    width: 100%;
 }
 
 button {
@@ -296,29 +351,52 @@ button {
     text-align: center;
     width: 120px;
     height: 40px;
-    margin: 20px auto;
+    margin: 30px auto;
     border-radius: 25% 10%;
-    
+    color: white;
+
 }
 
 a {
-    color: black;
+    
     text-decoration: none;
     margin-top: 8px;
+}
+
+.phone {
+    font-size: 1.5rem;
+    box-shadow: 5px 2px 20px white;
+    margin: 30px;
+}
+.espace {
+   margin-right: 15px ;
+    
 }
 
 
 /*footer *************************************************************************************************************/
 footer {
-    min-height: 20vh;
-    background-color: var(--color-pink);
+    max-height: 15vh;
+}
     
-} 
-.copyright{
-    font-size: 0.9rem;
-    padding: 20px;
+
+.copyright {
+    font-size: 15px;
+    padding: 9px;
+
 }
 
 
+/* 
+@media (max-width: 1440px) {
+    header {
+        height: 50vh;
+    }
 
-@media (min-700px)
+    .grand-slide {
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+
+    }
+} */
