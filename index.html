@@ -27,9 +27,9 @@
     <header>
         <img src="pictures/header2_1024.jpg" alt="">
         <button class="nav-toogle" type="button" aria-label="toggle curtain navigation">
-            <span class="barre l1"></span>
-            <span class="barre l2"></span> <!-- on ne met pas de div dans un bouton selon caninclude-->
-            <span class="barre l3"></span>
+            <div class="barre l1"></div>
+            <div class="barre l2"></div>
+            <div class="barre l3"></div>
         </button>
     </header>
     <main>
@@ -45,8 +45,11 @@
 
         <h1 id="accueil"> <strong class="ombre">Sandra Conil</strong></h1> <br>
         <p>Photographe à domicile</p><br>
-        <p id="contact" class="phone" > <strong class="espace">☎</strong>  06.27.85.06.54</p><br>
+        <button class="logo_phone">
+            <a class="phone" href="tel:+33627850654">☎</a>
+        </button>
         <p class="ombre">Restez chez vous, <br> je m'occupe de tout.</p>
+
 
         <div class="grand-slide">
             <div id="grossesse" class="container-slider">
@@ -65,15 +68,17 @@
             </div>
             <div class="card-container">
                 <div class="card">
-                    <div class="side side--font">
+                    <div class="side side-font">
+                        <!--ma page devant-->
                         <p class="tarif">Tarif</p>
                     </div>
-                    <!--ma page devant-->
-                    <div class="side side--back">
+
+                    <div class="side side-back">
+                        <!--ma page derriere-->
                         <p class="prix">56€ </p>
                         <p class="info-prix">Une vingtaine de photo en HD.</p>
                     </div>
-                    <!--ma page derriere-->
+
                 </div>
             </div>
 
@@ -93,11 +98,11 @@
             </div>
             <div class="card-container">
                 <div class="card">
-                    <div class="side side--font">
+                    <div class="side side-font">
                         <p class="tarif">Tarif</p>
                     </div>
                     <!--ma page devant-->
-                    <div class="side side--back">
+                    <div class="side side-back">
                         <p class="prix">86€ </p>
                         <p class="info-prix">Une vingtaine de photo en HD.</p>
                     </div>
@@ -120,11 +125,11 @@
             </div>
             <div class="card-container">
                 <div class="card">
-                    <div class="side side--font">
+                    <div class="side side-font">
                         <p class="tarif">Tarif</p>
                     </div>
                     <!--ma page devant-->
-                    <div class="side side--back">
+                    <div class="side side-back">
                         <p class="prix">86€ </p>
                         <p class="info-prix">Une vingtaine de photo en HD.</p>
                     </div>
@@ -139,9 +144,9 @@
                 Je vous propose aussi plusieurs fonds.
                 Lors de mes séances photos, tous les membres de la familles sont les bienvenus.
             </p>
-            <p id="contact" class="phone" > <strong class="espace">☎</strong>  06.27.85.06.54</p>
+                    <p class="text-deroulement">Vous avez une question ? <br>Vous souhaitez réserver ?</p>
             <button>
-                <a class="mailto" href="mailto:sandraconil77@gmail.com"> Contactez - moi</a>
+                <a id="contact" class="mailto" href="mailto:sandraconil77@gmail.com"> Contactez - moi</a>
             </button>
         </div>
     </main>
