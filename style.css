@@ -111,6 +111,10 @@ nav a:hover{
     height: 50vh;
 }
 
+.grand-ecran {
+    display: none;
+}
+
 
 /*main ***************************************************************************************************************/
 main {
@@ -128,7 +132,7 @@ h1 {
 
 }
 
-p,
+p, h2,
 .info,
 .studio {
     font-family: var(--text);
@@ -139,6 +143,7 @@ h1,
 p,
 .info,
 .studio,
+.ombre,
 .text-deroulement {
     /*je centre tous mes textes*/
     text-align: center;
@@ -151,9 +156,14 @@ p,
     color: var(--color-text);
 }
 
-p {
+.metier {
     font-size: 20px;
     color: var(--color-text);
+    margin-bottom: 25px;
+}
+
+p.ombre {
+    font-size: 1.2rem;
 }
 
 .info p {
@@ -357,10 +367,6 @@ button {
 
 }
 
-.mailto:hover{
-color: white;
-transition: 1s ease-in-out;
-}
 /******************** mes boutons ********************************************/
 .logo_phone{ /*bouton dans le header phone*/
     width: 32px;
@@ -378,7 +384,7 @@ transition: 1s ease-in-out;
     top: -3px;
     right: 2px;
 }
-/*bouton mail*/
+/*bouton mail dans le header*/
 .logo_mail {
     width: 32px;
     height: 29px;
@@ -396,6 +402,8 @@ transition: 1s ease-in-out;
     top: -2px;
     right: 3px;
 }
+/********* boutons contact bas *****************************************************/
+
 
 a {
   text-decoration: none;  
@@ -416,79 +424,34 @@ footer {
 /**** code pour format tablette au grand ecran ******************************************************************************/
  
 @media (min-width : 769px){
-    nav {
-        height: 7vh;
-        display: flex;
-        flex-direction: row;
-        align-items: center;    
-        background-color: var(--color-pink);  
 
+    h1{
+        font-size: 4.5rem;
+        /* padding-top: 0px; */
     }
+  p.metier{
+        font-size: 1.8rem;
+        margin : 30px;
+    }
+
+    p.ombre, .text-deroulement {
+        font-size: 1.5rem;
+    }
+  .info {
+   font-size: 1.3rem;
+  }  
     .nav-toogle{
-        /* display: none; */
+        display: none;
         
     }
-
-
 .grand-slide{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    flex-wrap: wrap;
-    gap: 20px; ;
-}
-.slides img {
-    width: 500px;
-  }
-  .slides {
-    display: flex;
-    width: calc(500px*3);
-    flex-wrap: wrap;
-    
-    margin: 20px auto;
-    /*marge entre mes blocs de 20px*/
-    animation: glisse 15s infinite;
-    /*je mets mon animation keyframes à 5sec en faisant une boucle*/
-}
-  .slide {
-    float: left;
-    /*toutes mes photos doivent etre à gauche*/
-    max-width: 100%;
-    display: flex;
-    justify-content: flex-start;
+ align-content: center;
+ margin: 80px 50px;
 }
 
-@keyframes glisse {
-    0% {
-        transform: translateX(0);
-    }
 
-    10% {
-        transform: translateX(0);
-    }
-
-    33% {
-        transform: translateX(-500px);
-    }
-
-    43% {
-        transform: translateX(-500px);
-    }
-
-    66% {
-        transform: translateX(-1000px);
-    }
-
-    76% {
-        transform: translateX(-1000px);
-    }
-
-    0% {
-        transform: translateX(0);
-    }
-
-}
 .card-container {
     width: 200px;
     height: 50px;
@@ -496,5 +459,57 @@ footer {
    flex-direction: row;
    flex-wrap: wrap;
 }
+
+.logo_mail {
+    width: 50px;
+    height: 40px;
+    border-radius: 25% 10%;
+    background-color: var(--color-gray);
+    top:-24px;
+    right: 124px;
+    position: absolute;
+
+}
+.mail{
+    font-size: 30px;
+    color: var(--color-pink);
+    position: relative;
+    top: -2px;
+    right: 2px;
+}
+
+.logo_phone{ /*bouton dans le header phone*/
+    width: 50px;
+    height: 40px;
+    border-radius: 25% 10%;
+    background-color: var(--color-gray);
+    top:-24px;
+    right: 50px;
+    position: absolute;
+}
+.contact{
+    font-size: 30px;
+    color: var(--color-pink);
+    position: relative;
+    top: -3px;
+    right: 2px;
+}
+
+nav {
+    width: 100vw;
+    height: 7vh;
+   }
+   nav a {
+    font-family: var(--text-h1);
+    font-size: 2rem;
+   
+   }
+   ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+   }
 
 }

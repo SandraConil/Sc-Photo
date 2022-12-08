@@ -8,6 +8,7 @@
 
  let navigation = document.querySelector("nav");
 
+
  //3. j'ajoute un evenement quand on clic sur les 3 barres. 
  iconeBurger.addEventListener("click",toogleNav);
 
