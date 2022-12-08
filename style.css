@@ -34,9 +34,7 @@ header img {
     left: 7px;
     height: 40px;
     width: 40px;
-    /* background-color: transparent; */
-    /*pour mettre mon bouton en transparence*/
-    display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: space-around;
     border: none;
@@ -112,6 +110,7 @@ nav a:hover{
 .nav-taille{
     height: 50vh;
 }
+
 
 /*main ***************************************************************************************************************/
 main {
@@ -340,11 +339,7 @@ p {
     margin: 30px 30px;
 }
 
-.mailto {
-    color: black;
-    box-sizing: content-box;
-    width: 100%;
-}
+
 
 button {
     background-color: var(--color-pink);
@@ -357,14 +352,6 @@ button {
     border-radius: 25% 10%;
 
 }
-
-a {
-
-    text-decoration: none;
-    margin-top: 8px;
-}
-
-
 .espace {
     margin-right: 15px;
 
@@ -374,7 +361,45 @@ a {
 color: white;
 transition: 1s ease-in-out;
 }
+/******************** mes boutons ********************************************/
+.logo_phone{ /*bouton dans le header phone*/
+    width: 32px;
+    height: 29px;
+    border-radius: 25% 10%;
+    background-color: var(--color-gray);
+    top:-24px;
+    right: 50px;
+    position: absolute;
+}
+.contact{
+    font-size: 20px;
+    color: var(--color-pink);
+    position: relative;
+    top: -3px;
+    right: 2px;
+}
+/*bouton mail*/
+.logo_mail {
+    width: 32px;
+    height: 29px;
+    border-radius: 25% 10%;
+    background-color: var(--color-gray);
+    top:-24px;
+    right: 94px;
+    position: absolute;
 
+}
+.mail{
+    font-size: 20px;
+    color: var(--color-pink);
+    position: relative;
+    top: -2px;
+    right: 3px;
+}
+
+a {
+  text-decoration: none;  
+}
 
 /*footer *************************************************************************************************************/
 footer {
@@ -392,12 +417,18 @@ footer {
  
 @media (min-width : 769px){
     nav {
-         min-height: 4vh;
-         flex-direction: row;
+        height: 7vh;
         display: flex;
-        justify-content: space-around;
-        align-items: center;      
+        flex-direction: row;
+        align-items: center;    
+        background-color: var(--color-pink);  
+
     }
+    .nav-toogle{
+        /* display: none; */
+        
+    }
+
 
 .grand-slide{
     display: flex;
@@ -464,8 +495,6 @@ footer {
    display: flex;
    flex-direction: row;
    flex-wrap: wrap;
-
-
 }
 
 }
