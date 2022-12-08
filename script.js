@@ -17,6 +17,7 @@
  let lienNav = document.querySelectorAll("a");
  console.log(lienNav);
 
+
  //4. je crée la fonction de toogleNav que j'ai mis au dessus
  // et j'ajoute la fonction pour la navigation en fonction qu'on clic sur le menu
  
@@ -24,13 +25,25 @@
     iconeBurger.classList.toggle("active")
     navigation.classList.toggle("nav-taille") 
     navigation.style.transition ='all ease 1s';
-        
+            
     for(let i=0;i < lienNav.length;i++){
 lienNav[i].classList.toggle('ecriture')
 lienNav[i].style.transition ='all ease 1s';
     }
-
  }
+
+ //5. je veux changer la couleur de mon titre Sandra Conil
+ let titreSc = document.querySelector("#accueil");
+ console.log(titreSc);
+
+titreSc.addEventListener('mouseout', function(){
+    titreSc.style.color = '#d75c9a';
+}
+);
+
+titreSc.addEventListener('mouseleave',function(){
+titreSc.style.color ="white";
+});
 
 
 
