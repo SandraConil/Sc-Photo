@@ -219,7 +219,7 @@ p.ombre {
     transition: transform 500ms ease-in-out;
     /*pour que ma carte se tourne en durée de 500 millisecondes*/
     transform-style: preserve-3d;
-    /*pour que ma carte 2D passe en 3D*/
+    /* pour que ma carte 2D passe en 3D ce qui permet de voir les 2cotés */
     border-radius: 25% 10%;
 }
 
@@ -285,6 +285,7 @@ p.ombre {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .container-slider {
@@ -386,7 +387,7 @@ button {
     font-size: 20px;
     color: var(--color-pink);
     position: relative;
-    top: -3px;
+    top: -4px;
     right: 2px;
 }
 /*bouton mail dans le header*/
@@ -436,6 +437,7 @@ form{
 
 footer {
     height: 15vh;
+    width: 100%;
     background-color: var(--color-pink);
    margin-top: 20px;
    display: flex;
@@ -460,29 +462,7 @@ footer {
  
 }
 
-/**** compteur ******************************/
-.container-visiteurs { /*texte 0 pour mon compteur*/
-display: flex;
-flex-direction: row;
-align-items: flex-end;
-justify-content: flex-end;
-gap: 10px;
-color: white;
-margin-top: 90px;
-}
-#compteur {
-    font-size: 35px;
-    color: var(--color-pink);
-    background-color: var(--color-gray); 
-    margin-right: 15px;
-    width: 150px;
-   
-}
-.txt-visites {
-    color: var(--color-gray);
-}
-
-/**** code pour format tablette au grand ecran ******************************************************************************/
+/**** code pour grand ecran ******************************************************************************/
  
 @media (min-width : 769px){
 
@@ -495,31 +475,42 @@ margin-top: 90px;
         margin : 30px;
     }
 
-    p.ombre, .text-deroulement {
+p.ombre, .text-deroulement {
         font-size: 1.5rem;
     }
-  .info {
+.info {
    font-size: 1.3rem;
   }  
-    .nav-toogle{
+.nav-toogle{
         display: none;
         
     }
 .grand-slide{
     display: flex;
-    flex-direction: row;
- /* align-content: center; */
- gap: 10px;
- margin: 80px 50px;
+    /* width: 100%; */
+    flex-direction:row;
+    align-items: flex-start; /*pour que mes slides soient alignés sur le haut*/
+    /* justify-content: center; */
+    margin: 93px 79px;
+    
+    }
+.card{
+   position: absolute;
 }
-
-
-.card-container {
-    width: 200px;
-    height: 50px;
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
+.c1{
+    position: relative;
+    bottom: -559px;
+    left: -198px;
+}
+.c2{
+    position: relative;
+    bottom: -580px;
+    left: -198px;
+}
+.c3{
+    position: relative;
+    bottom: -510px;
+    left: -198px;
 }
 
 .logo_mail {
@@ -527,8 +518,8 @@ margin-top: 90px;
     height: 40px;
     border-radius: 25% 10%;
     background-color: var(--color-gray);
-    top:-24px;
-    right: 124px;
+    top:-15px;
+    right: 120px;
     position: absolute;
 
 }
@@ -537,7 +528,7 @@ margin-top: 90px;
     color: var(--color-pink);
     position: relative;
     top: -2px;
-    right: 2px;
+    right: -2px;
 }
 
 .logo_phone{ /*bouton dans le header phone*/
@@ -545,57 +536,42 @@ margin-top: 90px;
     height: 40px;
     border-radius: 25% 10%;
     background-color: var(--color-gray);
-    top:-24px;
-    right: 50px;
+    top:-15px;
+    right: 59px;
     position: absolute;
 }
 .contact{
     font-size: 30px;
     color: var(--color-pink);
     position: relative;
-    top: -3px;
-    right: 2px;
+    top: -7px;
+    right: 0px;
 }
 
 nav {
     width: 100vw;
     height: 7vh;
-   }
-   nav a {
+}
+
+nav a {
     font-family: var(--text-h1);
     font-size: 2rem;
-   
-   }
-   ul {
+}
+
+ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 80%;
-   }
+}
 
-   .formulaire{
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-   }
-   .forms{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 500px;
-   background-color: var(--color-gray);
-    
-   }
-   input{
-    width: 500px;
+
+  input{
+    width: 400px;
    }
    textarea{
-    width: 500px ;
+    width: 400px ;
    }
 
    .submit{
@@ -604,4 +580,15 @@ nav {
 
    }
 
+   .text-deroulement{
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 50px 60px;
+   }
+
+   .question {
+        font-size: 1.5rem;
+        
+        } 
 }
+
