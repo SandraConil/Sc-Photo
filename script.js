@@ -12,13 +12,13 @@
  //3. j'ajoute un evenement quand on clic sur les 3 barres.pour ecouter un événement.
   iconeBurger.addEventListener("click",toogleNav);
 
-  //4.
+  //4.je recupere tous mes liens
 
  let lienNav = document.querySelectorAll("a");
  console.log(lienNav);
 
 
-  //4. je crée la fonction de toogleNav que j'ai mis au dessus
+  //5. je crée la fonction de toogleNav que j'ai mis au dessus
   // et j'ajoute la fonction pour la navigation en fonction qu'on clic sur le menu 
  
   function toogleNav(){

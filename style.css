@@ -25,6 +25,7 @@ header img {
     max-height: 100%;
 }
 
+
 /*************************** menu  **********************************************************************************************/
 .nav-toogle {
     position: fixed;
@@ -85,8 +86,6 @@ nav {
     flex-direction: column;
     background: transparent;
     border-bottom: 2px solid var(--color-gray);
-   
-    /* transition: transform 0.9s cubic-bezier(.76,.23,.61,.76); */
 }
 
 nav.active {
@@ -464,7 +463,7 @@ footer {
 
 /**** code pour grand ecran ******************************************************************************/
  
-@media (min-width : 1023px){
+@media (min-width :768px){
 
     h1{
         font-size: 4.5rem;
@@ -564,6 +563,7 @@ ul {
     width: 80%;
 }
 
+/*form*/
 
   input{
     width: 400px;
@@ -592,7 +592,7 @@ ul {
 
 
 /*pour tablette********************************************/
-@media (min-width: 768px) and (max-width:1023px){
+ @media (min-width: 767px){ 
     .nav-toogle{
         display: none;
     }
@@ -603,7 +603,7 @@ ul {
     
     nav a {
         font-family: var(--text-h1);
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
     ul {
@@ -613,8 +613,14 @@ ul {
         justify-content: space-between;
         width: 80%;
     }
-    
+    .logo{
+        position: absolute;
+        z-index: 1;
+     top: 200px;
+        left: -5px;
+        width: 25%;
+    }    
 }
-    
+
 
 
